@@ -1,9 +1,11 @@
-#!/bin/bash
-
-# Funciones de tareas automatizadas
 crear_usuario() {
     read -p "Ingrese el nombre del nuevo usuario: " nombre_usuario
     read -p "Ingrese el directorio personal (dejar en blanco para el predeterminado): " directorio_personal
+
+    if [ -z "$nombre_usuario" ]; then
+        echo "El nombre del usuario no puede estar vacío."
+        return 1
+    fi
 
     if [ -z "$directorio_personal" ]; then
         directorio_personal="/home/$nombre_usuario"
@@ -16,18 +18,11 @@ crear_usuario() {
     else
         echo "Error al crear el usuario."
     fi
-
-    read -p "¿Desea agregar '$nombre_usuario' a un grupo específico? (s/n): " respuesta
-    if [ "$respuesta" == "s" ]; then
-        read -p "Ingrese el nombre del grupo: " grupo
-        sudo usermod -aG "$grupo" "$nombre_usuario"
-        echo "Usuario '$nombre_usuario' agregado al grupo '$grupo'."
-    fi
 }
 
 eliminar_cache() {
     echo "Eliminando archivos temporales y caché..."
-    sudo rm -rf /tmp/*
+    sudo rm -rf /tmp/* 
     sudo rm -rf ~/.cache/*
     echo "Caché del sistema y archivos temporales eliminados."
 }
@@ -44,7 +39,6 @@ generar_informe() {
     echo "Informe guardado en sistema_informe.log."
 }
 
-# Menú interactivo
 while true; do
     echo -e "\n\033[1;34mSeleccione una opción:\033[0m"
     echo "1) Crear nuevo usuario"
