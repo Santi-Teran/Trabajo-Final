@@ -27,7 +27,8 @@ cd tu-repositorio
 4. **Interactúa con el menú:**
    Selecciona la tarea deseada ingresando el número correspondiente en la consola y sigue las instrucciones proporcionadas.
 
-Ejemplo de uso
+### Ejemplo de uso
+
 A continuación, se muestra cómo el menú interactivo debería verse al ejecutar el script:
 
 Seleccione una opción:
@@ -38,18 +39,23 @@ Seleccione una opción:
 4. Salir
    Ingrese su opción: 1
 
-Estructura del proyecto
+### Estructura del proyecto
+
 script.sh: Script principal en Bash con el menú interactivo.
 sistema_informe.log: Archivo de log generado por la opción de informe, donde se registran las estadísticas de CPU, memoria y disco.
-Contribuciones
+
+### Contribuciones
+
 Se aceptan contribuciones en forma de pull requests para mejorar la funcionalidad y compatibilidad del script en diferentes entornos Linux o ampliar sus opciones de configuración.
 
-Para contribuir:
+### Para contribuir:
 
-Haz un fork del repositorio.
-Crea una rama para tu funcionalidad (git checkout -b nueva-funcionalidad).
-Realiza tus cambios y commits (git commit -am 'Descripción de cambios').
-Haz push a la rama (git push origin nueva-funcionalidad).
-Abre un pull request.
-Licencia
+1. Haz un fork del repositorio.
+2. Crea una rama para tu funcionalidad (git checkout -b nueva-funcionalidad).
+3. Realiza tus cambios y commits (git commit -am 'Descripción de cambios').
+4. Haz push a la rama (git push origin nueva-funcionalidad).
+5. Abre un pull request.
+
+### Licencia
+
 Distribuido bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
