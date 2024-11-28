@@ -1,3 +1,5 @@
+#!/bin/bash
+
 crear_usuario() {
     while true; do
         read -p "Ingrese el nombre del nuevo usuario: " nombre_usuario

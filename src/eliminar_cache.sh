@@ -1,3 +1,5 @@
+#!/bin/bash
+
 eliminar_cache() {
     echo "Eliminando archivos temporales y caché..."
     sudo rm -rf /tmp/* 

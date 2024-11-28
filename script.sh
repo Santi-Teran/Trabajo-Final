@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source ./src/crear_usuario.sh
 source ./src/eliminar_cache.sh
 source ./src/generar_informe.sh

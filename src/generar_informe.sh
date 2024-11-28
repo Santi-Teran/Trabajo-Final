@@ -1,3 +1,5 @@
+#!/bin/bash
+
 generar_informe() {
     echo "Generando informe de uso del sistema..."
     echo "----- INFORME DE USO DEL SISTEMA -----" > sistema_informe.log
