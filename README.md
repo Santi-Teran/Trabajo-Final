@@ -2,11 +2,12 @@
 
 ### Descripción breve del proyecto
 
-Este proyecto implementa un script en **Bash** para automatizar tres tareas comunes en sistemas Linux:
+Este proyecto implementa un conjunto de scripts en **Bash** para automatizar tareas comunes de administración en sistemas Linux, ahora con una estructura modularizada para mayor claridad y mantenimiento. Las funcionalidades incluyen:
 
-1. **Creación de usuarios** en el sistema con la opción de asignar permisos y directorios.
+1. **Creación de usuarios** con validación de entradas y directorios personalizados.
 2. **Eliminación de archivos temporales** y caché para liberar espacio en disco.
 3. **Generación de un informe de uso del sistema** que registra la carga de CPU, uso de memoria y espacio en disco.
+4. **Verificación e instalación de actualizaciones** del sistema, incluyendo mensajes si no hay actualizaciones disponibles.
 
 ### Instrucciones de uso
 
@@ -15,8 +16,8 @@ Para ejecutar el script, sigue los pasos a continuación:
 1. **Clona el repositorio** en tu sistema:
 
 bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
+git clone https://github.com/Santi-Teran/Trabajo-Final
+cd Trabajo-Final
 
 2. **Da permisos de ejecución al script:**
    chmod +x script.sh
@@ -36,13 +37,19 @@ Seleccione una opción:
 1. Crear nuevo usuario
 2. Eliminar archivos temporales
 3. Generar informe de uso de recursos
-4. Salir
+4. Verificar e instalar actualizaciones
+5. Salir
    Ingrese su opción: 1
 
 ### Estructura del proyecto
 
-script.sh: Script principal en Bash con el menú interactivo.
-sistema_informe.log: Archivo de log generado por la opción de informe, donde se registran las estadísticas de CPU, memoria y disco.
+Trabajo Final/
+├── src/
+│ ├── crear_usuario.sh
+│ ├── eliminar_cache.sh
+│ ├── generar_informe.sh
+│ ├── actualizar_sistema.sh
+├── script.sh
 
 ### Contribuciones
 
