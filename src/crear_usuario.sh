@@ -10,10 +10,17 @@ crear_usuario() {
         fi
     done
 
-    read -p "Ingrese el directorio personal (dejar en blanco para el predeterminado): " directorio_personal
-    if [ -z "$directorio_personal" ]; then
-        directorio_personal="/home/$nombre_usuario"
-    fi
+    while true; do
+        read -p "Ingrese el directorio personal (dejar en blanco para usar el predeterminado /home/$nombre_usuario): " directorio_personal
+        if [ -z "$directorio_personal" ]; then
+            directorio_personal="/home/$nombre_usuario"
+            break
+        elif [[ "$directorio_personal" =~ ^/ ]]; then
+            break
+        else
+            echo "El directorio debe ser un camino absoluto (comenzar con '/'). Intente nuevamente."
+        fi
+    done
 
     sudo useradd -m -d "$directorio_personal" "$nombre_usuario"
     if [ $? -eq 0 ]; then
